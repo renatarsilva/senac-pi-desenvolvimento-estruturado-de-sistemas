@@ -5,6 +5,7 @@ class Raposa {
   peso: number = 0;
   alimentacao: number = 0;
   velocidade: number = 0;
+  sono: number = 0;
 
   constructor(
     novoNome: string,
@@ -18,7 +19,7 @@ class Raposa {
     this.peso = novoPeso;
   }
 
-  corrida(velocidade?: number) {
+  correr(velocidade?: number) {
     if (velocidade === undefined) {
       this.velocidade += 10;
     } else {
@@ -39,33 +40,52 @@ class Raposa {
       this.alimentacao = 2;
     }
   }
+
+  dormir(sono: number) {
+    this.sono = sono;
+  }
 }
 
 const raposa01 = new Raposa("Luna", "Vermelha", 4, 3);
 console.log(
-  `Nome:${raposa01.nome}, cor:${raposa01.cor}, idade:${raposa01.idade}, peso:${raposa01.peso}`
+  `Nome:${raposa01.nome}, cor:${raposa01.cor}, idade:${raposa01.idade}, peso:${raposa01.peso}kg`
 );
-raposa01.corrida();
-console.log(`Velocidade:${raposa01.velocidade}Km/h`);
+raposa01.correr();
+console.log(`A raposa 1 corre a ${raposa01.velocidade}km/h`);
 
 raposa01.comer();
-console.log(`A raposa 1, deve comer ${raposa01.alimentacao} Kg por dia \n`);
+console.log(
+  `A raposa 1 deve comer ${raposa01.alimentacao}kg de alimento por dia`
+);
+
+raposa01.dormir(12);
+console.log(`A raposa 1 deve dormir ${raposa01.sono} horas por dia \n`);
 
 const raposa02 = new Raposa("Aurora", "Prateada", 2, 4.5);
 console.log(
-  `Nome:${raposa02.nome}, cor:${raposa02.cor}, idade:${raposa02.idade}, peso:${raposa02.peso} `
+  `Nome:${raposa02.nome}, cor:${raposa02.cor}, idade:${raposa02.idade}, peso:${raposa02.peso}kg `
 );
-raposa02.corrida(40);
-console.log(`Velocidade:${raposa02.velocidade}Km/h`);
+raposa02.correr(40);
+console.log(`A raposa 2 corre a ${raposa02.velocidade}km/h`);
 
 raposa02.comer();
-console.log(`A raposa 2, deve comer ${raposa02.alimentacao} Kg por dia \n`);
+console.log(
+  `A raposa 2 deve comer ${raposa02.alimentacao}kg de alimento por dia `
+);
+
+raposa02.dormir(10);
+console.log(`A raposa 2 deve dormir ${raposa02.sono} horas por dia \n`);
 
 const raposa03 = new Raposa("Shadow", "Preta", 6, 7);
 console.log(
-  `Nome:${raposa03.nome}, cor:${raposa03.cor}, idade:${raposa03.idade}, peso:${raposa03.peso}`
+  `Nome:${raposa03.nome}, cor:${raposa03.cor}, idade:${raposa03.idade}, peso:${raposa03.peso}kg`
 );
-raposa03.corrida(38);
-console.log(`Velocidade:${raposa03.velocidade}Km/h`);
+raposa03.correr(38);
+console.log(`A raposa 3 corre a ${raposa03.velocidade}km/h`);
 raposa03.comer();
-console.log(`A raposa 3, deve comer ${raposa03.alimentacao} Kg por dia`);
+console.log(
+  `A raposa 3 deve comer ${raposa03.alimentacao}kg de alimento por dia`
+);
+
+raposa03.dormir(8);
+console.log(`A raposa 3 deve dormir ${raposa03.sono} horas por dia`);
