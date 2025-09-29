@@ -42,7 +42,7 @@ var Raposa = /** @class */ (function () {
 var raposa01 = new Raposa("Luna", "Vermelha", 4, 3);
 console.log("Nome:".concat(raposa01.nome, ", cor:").concat(raposa01.cor, ", idade:").concat(raposa01.idade, ", peso:").concat(raposa01.peso, "Kg"));
 raposa01.correr();
-console.log("A raposa 1 corre a ".concat(raposa01.velocidade, "km/h}"));
+console.log("A raposa 1 corre a ".concat(raposa01.velocidade, "km/h"));
 raposa01.comer();
 console.log("A raposa 1 deve comer ".concat(raposa01.alimentacao, "kg de alimento por dia"));
 raposa01.dormir(12);
@@ -54,7 +54,7 @@ console.log("A raposa 2 deve comer ".concat(raposa02.alimentacao, "kg de aliment
 raposa02.dormir(10);
 console.log("A raposa 2 deve dormir ".concat(raposa02.sono, " horas por dia \n"));
 var raposa03 = new Raposa("Shadow", "Preta", 6, 7);
-console.log("".concat(raposa03.nome, ", cor").concat(raposa03.cor, ", idade:").concat(raposa03.idade, ", peso:").concat(raposa03.peso, "Kg"));
+console.log("".concat(raposa03.nome, ", cor:").concat(raposa03.cor, ", idade:").concat(raposa03.idade, ", peso:").concat(raposa03.peso, "Kg"));
 raposa03.correr(38);
 console.log("A raposa 3 corre a ".concat(raposa03.velocidade, "Km/h"));
 raposa03.comer();
